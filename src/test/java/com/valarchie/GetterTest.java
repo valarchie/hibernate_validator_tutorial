@@ -39,6 +39,9 @@ public class GetterTest {
                 validator.validate( carWithGetter );
 
         assertEquals(1, constraintViolations.size());
+
+        System.out.println(constraintViolations.iterator().next().getPropertyPath());
+
         assertEquals("不能为null", constraintViolations.iterator().next().getMessage());
 
     }
